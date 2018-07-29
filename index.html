@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body> 
+  <script>
+    function computerPlay() {
+      let randInt = Math.floor(Math.random() * Math.floor(3));
+      if (randInt === 0) {
+        return "rock";
+      } else if (randInt === 1) {
+        return "paper";
+      } else {
+        return "scissors";
+      }
+    }
+    function playRound(playerSelection, computerSelection) {
+      if (playerSelection === "rock" || playerSelection === "paper" || playerSelection === "scissors") {
+        if (playerSelection === "rock") {
+          if (computerSelection === "paper") {
+            return "You Lose! Paper beats Rock.";
+          } else if (computerSelection === "scissors") {
+            return "You Win! Rock beats Scissors.";
+          } else {
+            return "Draw! You both did Rock.";
+          }
+        }
+        if (playerSelection === "paper") {
+          if (computerSelection === "paper") {
+            return "Draw! You both did Paper.";
+          } else if (computerSelection === "scissors") {
+            return "You Lose! Scissors beats Paper.";
+          } else {
+            return "You Win! Paper beats Rock.";
+          }
+        }
+        if (playerSelection === "scissors") {
+          if (computerSelection === "paper") {
+            return "You Win! Scissors beats Paper";
+          } else if (computerSelection === "scissors") {
+            return "Draw! You both did Scissors.";
+          } else {
+            return "You Lose! Rock beats Scissors.";
+          }
+        }
+      } else {
+        return "That's not a real selection.";
+      }
+    }
+    let playerSelection = prompt("Select either Paper, Scissors or Rock").toLowerCase();
+    console.log(playRound(playerSelection, computerPlay()));
+  </script>
+</body>
+</html>
