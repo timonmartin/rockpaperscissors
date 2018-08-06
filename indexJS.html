@@ -26,16 +26,21 @@
     buttons.forEach((button) => {
       button.addEventListener('click', () => {
         playerSelection = button.id;
-        roundResult.textContent = playRound(playerSelection, computerSelection());
         if (playerScore < 5 && computerScore < 5) {
+          roundResult.textContent = playRound(playerSelection, computerSelection());
           if (playerWin) {
             playerScore += 1;
           } else if (computerWin) {
             computerScore += 1;
           }
           score.textContent = "The score is now Player: " + playerScore + " Computer: " + computerScore;
-        } else {
-
+        }
+        if (playerScore === 5 || computerScore === 5) {
+          if (playerScore > computerScore) {
+            gameOver.textContent = "Game over! You won, congrats!";
+          } else {
+            gameOver.textContent = "Game over! You lost, boo-hoo!";
+          }
         }
       });
     });
