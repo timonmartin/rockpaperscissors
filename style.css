@@ -1,0 +1,35 @@
+html {
+	background: url(https://openclipart.org/download/213382/rock-paper-scissors.svg) center;
+	background-size: 60%;
+	background-repeat: no-repeat;
+	height: 100%;
+	font-family: 'Karla', sans-serif;
+}
+
+button {
+	color: #0099CC;
+	background: transparent;
+	border: 2px solid #0099CC;
+	border-radius: 6px;
+	font-size: 16px;
+	padding: 5px;
+	margin: 5px;
+	width: 80px;
+
+}
+
+.mainBox {
+	position: fixed;
+	bottom: 250px;
+	right: 200px;
+	width: 350px;
+	height: 80px;
+}
+
+.buttons {
+	text-align: center;
+}
+
+.text {
+	text-align: center;
+}
