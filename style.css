@@ -15,7 +15,22 @@ button {
 	padding: 5px;
 	margin: 5px;
 	width: 80px;
+	cursor: pointer;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	outline: none;
+	color: black;
 
+}
+
+button:hover {
+	background-color: #008CBA;
+	color: white;
+}
+
+button:focus {
+	background-color: #007399;
+	color: white;
 }
 
 .mainBox {
@@ -32,4 +47,9 @@ button {
 
 .text {
 	text-align: center;
+	margin-top: 20px;
+}
+
+#roundResult, #score, #gameOver {
+	margin: 20px 0;
 }
